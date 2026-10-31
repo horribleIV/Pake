@@ -23,7 +23,7 @@ export default class WinBuilder extends BaseBuilder {
 
   constructor(options: PakeAppOptions) {
     super(options);
-    const validArchs = ['x64', 'arm64', 'auto'];
+    const validArchs = ['x86', 'x64', 'arm64', 'auto'];
     this.buildArch = validArchs.includes(options.targets || '')
       ? this.resolveTargetArch(options.targets)
       : this.resolveTargetArch('auto');
